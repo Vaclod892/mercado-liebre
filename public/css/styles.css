@@ -1,69 +1,67 @@
-* {
+*{
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
     box-sizing: border-box;
 }
 
-body {
+body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
 
-h3 {
+h3{
     font-size: 24px;
 }
 
-p {
+p{
     font-size: 12px;
 }
 
-div.top-header {
+div.top-header{
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
 }
 
-header div.top-header p {
+header div.top-header p{
     width: 100%;
     text-align: center;
     margin-top: 10px;
 }
 
-header {
+header{
     background-color: #EAC926;
 }
 
 header div.logo,
-header .form {
+header .form{
     width: 50%;
 }
 
-header div.logo {
+header div.logo{
     padding: 10px;
 }
-
-header .form {
+header .form{
     display: flex;
     align-items: center;
     padding: 2px;
     font-size: 11px;
 }
-
-header nav {
+header nav{
     font-size: 12px;
     margin-left: 20px;
 }
 
-header ul li {
+header ul li{
     list-style-type: none;
 }
 
-header ul li a {
+header ul li a{
     text-decoration: none;
     color: #000;
 }
 
-header .form .input {
+header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
@@ -71,18 +69,18 @@ header .form .input {
     padding: 2px;
 }
 
-header .form .submit {
+header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
     width: 10%;
 }
 
-div.burger-menu {
+div.burger-menu{
     text-align: center;
 }
 
-div.burger-menu i {
+div.burger-menu i{
     background-color: #0044AA;
     border-radius: 5px;
     color: #FFF;
@@ -94,60 +92,60 @@ div.burger-menu i {
 }
 
 div.last-visit,
-div.offers {
+div.offers{
     display: flex;
     flex-wrap: wrap;
 }
 
-.price {
+.price{
     font-size: 18px;
     width: 30%;
 }
 
-.discount {
+.discount{
     width: 70%;
 }
 
 .discount,
-.description {
+.description{
     font-size: 16px;
     font-weight: normal;
 }
 
 h3,
-.description {
+.description{
     color: #666;
 }
 
-.description {
+.description{
     display: none;
     margin-top: 20px;
 }
 
-section.banner img {
+section.banner img{
     width: 100%;
 }
 
-main {
+main{
     width: 90%;
     margin: 0 auto;
 }
 
-main section article {
-    background-color: #fff;
+main section article{
+    background-color: #fff;    
     margin: 10px 0px;
 }
 
-main section article img {
+main section article img{
     width: 100%;
 }
 
 main section article i,
-.discount {
+.discount{
     color: #39b54a;
 }
 
-main section article i {
+main section article i{
     display: block;
     font-size: 16px;
     padding: 5px;
@@ -161,11 +159,19 @@ main section article i {
     top: -15px;
 }
 
-main section h3 {
+main section h3{
     margin: 20px 0px;
 }
 
-article div.main-article {
+main section div.products article i{
+    transition: transform 1s;
+}
+
+main section div.products article:hover i{
+    transform: rotate(-90deg);
+}
+
+article div.main-article{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -174,68 +180,39 @@ article div.main-article {
     position: relative;
     padding: 15px;
 }
-
-footer section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0px;
+main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+main section article:hover .description{
+    display: block;
 }
 
-footer section h3{
-    margin: 0px;
-    color: #666;
+.login input[type='submit']:hover,
+.register input[type='submit']:hover{
+    background-color: #0022AA;
 }
 
-footer section i{
-    font-size: 2em;
-    color: #1259c3;
-    margin-bottom: 10px;
-}
-
-footer section p{
-    margin: 0px;
-}
-
-footer p{
-    color: #666;
-    width: 61%;
-}
-
-footer .copyright {
-    margin-left: 15px;
-    font-size: 11px;
-}
-
-@media (min-width: 361px) {
-    main section article .description {
-        display: block;
-    }
-
-    main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-
-    main section div.products {
+@media (min-width: 361px){
+    main section div.products{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
     }
-
-    main section div.products article {
+    
+    main section div.products article{
         width: 45%;
     }
 
     .price,
-    .discount {
+    .discount{
         width: 50%;
     }
 }
 
-@media (min-width: 769px) {
-    main section div.products article {
+@media (min-width: 769px){
+    main section div.products article{
         width: 22%;
     }
 }
