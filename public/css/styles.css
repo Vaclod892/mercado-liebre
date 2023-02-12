@@ -1,153 +1,120 @@
-*{
+* {
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
 
-h3{
+h3 {
     font-size: 24px;
 }
 
-p{
+p {
     font-size: 12px;
 }
 
-div.top-header{
+div.top-header {
     display: flex;
     flex-wrap: wrap;
-    padding: 1%;
     align-items: center;
     justify-content: space-around;
 }
 
-header div.top-header p{
-    width: 100%;
+header div.top-header p {
     text-align: center;
     margin-top: 10px;
 }
 
-header{
+header {
     background-color: #EAC926;
 }
 
-header div.logo {
-    width: 50%;
-    padding: 10px;
-}
-
-header div.logo{
-    padding: 10px;
-}
-header .form{
+header form {
     display: flex;
     align-items: center;
     padding: 2px;
     font-size: 11px;
 }
-header nav{
-    font-size: 12px;
-    margin-left: 20px;
-}
 
-header ul li{
-    list-style-type: none;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: #000;
-}
-
-header .form .input{
+header form input {
     background-color: #FFF;
-    border: 1px solid #000;
+    border: none;
     outline: none;
     color: #666;
-    padding: 2px;
+    padding: 7%;
+    width: 100%;
+    font-size: 1.3em;
+    border-radius: 10px 0 0 10px;
 }
 
-header .form .submit{
+header form button {
     background-color: #FFF;
-    border: 1px solid #000;
+    border: none;
     color: #666;
     width: 10%;
-}
-
-div.burger-menu{
-    text-align: center;
-}
-
-div.burger-menu i{
-    background-color: #0044AA;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 20px;
-    height: 40px;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-    width: 40px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
 }
 
 div.last-visit,
-div.offers{
+div.offers {
     display: flex;
     flex-wrap: wrap;
 }
 
-.price{
+.price {
     font-size: 18px;
     width: 30%;
 }
 
-.discount{
+.discount {
     width: 70%;
 }
 
 .discount,
-.description{
+.description {
     font-size: 16px;
     font-weight: normal;
 }
 
 h3,
-.description{
+.description {
     color: #666;
 }
 
-.description{
+.description {
     display: none;
     margin-top: 20px;
 }
 
-section.banner img{
+section.banner img {
     width: 100%;
 }
 
-main{
+main {
     width: 90%;
     margin: 0 auto;
 }
 
-main section article{
-    background-color: #fff;    
+main section article {
+    background-color: #fff;
     margin: 10px 0px;
 }
 
-main section article img{
+main section article img {
     width: 100%;
 }
 
 main section article i,
-.discount{
+.discount {
     color: #39b54a;
 }
 
-main section article i{
+main section article i {
     display: block;
     font-size: 16px;
     padding: 5px;
@@ -161,19 +128,19 @@ main section article i{
     top: -15px;
 }
 
-main section h3{
+main section h3 {
     margin: 20px 0px;
 }
 
-main section div.products article i{
+main section div.products article i {
     transition: transform 1s;
 }
 
-main section div.products article:hover i{
+main section div.products article:hover i {
     transform: rotate(-90deg);
 }
 
-article div.main-article{
+article div.main-article {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -182,39 +149,282 @@ article div.main-article{
     position: relative;
     padding: 15px;
 }
-main section article:hover{
+
+main section article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-main section article:hover .description{
+
+main section article:hover .description {
     display: block;
 }
 
 .login input[type='submit']:hover,
-.register input[type='submit']:hover{
+.register input[type='submit']:hover {
     background-color: #0022AA;
 }
 
-@media (min-width: 361px){
-    main section div.products{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer div.info {
+    display: flex;
+}
+
+footer div.info section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Productos */
+
+main section div.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (min-width: 361px) {
+    header div.top-header {
+        padding: 5%;
     }
-    
-    main section div.products article{
-        width: 45%;
+
+    header div.top-header div.logo {
+        width: 50%;
+        padding: 10px;
+    }
+
+    header form {
+        width: 50%;
+        align-items: stretch;
+    }
+
+    header form input {
+        padding: 6%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    div.burger-menu {
+        display: block;
+        text-align: center;
+    }
+
+    div.burger-menu i {
+        background-color: #0044AA;
+        border-radius: 5px;
+        color: #FFF;
+        font-size: 20px;
+        height: 40px;
+        margin: 10px 0px 20px 0px;
+        padding: 10px;
+        width: 40px;
+    }
+
+    main section div.products article {
+        width: 90%;
     }
 
     .price,
-    .discount{
+    .discount {
         width: 50%;
+    }
+
+    footer div.info {
+        flex-direction: column;
+    }
+
+    footer div.info section {
+        margin: 20px 0px;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer div.info section i {
+        font-size: 2em;
+        color: #1259c3;
+        margin-bottom: 10px;
+    }
+
+    footer div.info section p {
+        color: #666;
+        width: 61%;
+        font-size: 12px;
+    }
+
+    footer div.copyright p {
+        color: #666;
+        margin-left: 14px;
+    }
+
+    /* Formularios */
+
+    section.login div.form-input,
+    section.register div.form-input {
+        width: 75%;
+        margin-bottom: 7%;
+    }
+
+    section.login div.form-input input,
+    section.register div.form-input input {
+        padding: 5%;
+    }
+
+    section.login div.form-button,
+    section.register div.form-button {
+        width: 75%;
+        padding: 2%;
+    }
+
+    section div.form-button button {
+        width: 100%;
+        padding: 5%;
     }
 }
 
-@media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
+@media (min-width: 769px) {
+    header nav {
+        display: flex;
+        font-size: 12px;
+        margin-left: 20px;
+        justify-content: space-between;
+        align-items: flex-end;
     }
+
+    header nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    header nav ul li {
+        padding: 4% 0;
+        margin: 0 20px;
+        list-style-type: none;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    header div.top-header {
+        padding: 0px;
+    }
+
+    header div.top-header div.logo {
+        width: 20vw;
+    }
+
+    div.burger-menu {
+        display: none;
+    }
+
+    header form {
+        display: flex;
+        padding: 2px;
+        font-size: 11px;
+        width: 50%;
+        align-items: stretch;
+    }
+
+    header form input {
+        padding: 2%;
+    }
+
+    main section div.products {
+        height: 55vh;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    main section div.products article {
+        width: 22%;
+        cursor: pointer;
+    }
+
+    footer div.info {
+        flex-direction: row;
+    }
+
+    /* Formularios */
+
+    section.login div.form-input,
+    section.register div.form-input {
+        width: 50%;
+        margin-bottom: 1%;
+    }
+
+    section.login div.form-input input,
+    section.register div.form-input input {
+        padding: 2%;
+    }
+
+    section.login div.form-button,
+    section.register div.form-button {
+        width: 50%;
+        padding: 0;
+    }
+
+    section div.form-button button {
+        width: 100%;
+        padding: 2%;
+    }
+
+}
+
+section.login,
+section.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+section.login form,
+section.register form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+section.login div.form-button button:hover,
+section.register div.form-button button:hover {
+    color: white;
+    background-color: #0022AA;
+}
+
+section.login div.form-input,
+section.register div.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+section.login div.form-input input,
+section.register div.form-input input {
+    border: 1px solid #8080807a;
+}
+
+section.login div.form-button,
+section.register div.form-button {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+section div.form-button button {
+    background-color: #0044aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
 }
