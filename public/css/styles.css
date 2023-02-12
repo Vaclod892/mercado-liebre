@@ -20,7 +20,9 @@ p{
 div.top-header{
     display: flex;
     flex-wrap: wrap;
-    padding: 5%;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-around;
 }
 
 header div.top-header p{
@@ -33,9 +35,9 @@ header{
     background-color: #EAC926;
 }
 
-header div.logo,
-header .form{
+header div.logo {
     width: 50%;
+    padding: 10px;
 }
 
 header div.logo{
